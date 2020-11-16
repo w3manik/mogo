@@ -1,0 +1,669 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}
+ul,ol{
+    list-style-type: none;
+}
+/*============ Navbar Part CSS ================*/
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+.bg {
+    background: #95e1d3;
+    height: 70px;
+    animation: sticky 1s;
+}
+@keyframes sticky{
+    from{top: -50px}
+    to{top: 0}
+}
+.navbar .navbar-nav .nav-link {
+	color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 80px;
+    transition: all linear .3s;
+    position: relative;
+}
+.navbar .navbar-nav .nav-item{
+    padding: 0 27px;
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+	 padding-right: 0; 
+	 padding-left: 0; 
+}
+.navbar .navbar-nav .nav-link:after {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #fce38a;
+    left: 0;
+    bottom: 28px;
+    opacity: 0;
+    transition: all linear .3s;
+}
+.navbar .navbar-nav .nav-link:hover{
+    color: #fce38a;
+}
+.navbar .navbar-nav .nav-link:hover:after{
+    opacity: 1;
+    width: 100%;
+}
+/*============ Banner Part CSS ================*/
+#banner {
+    background: url(../images/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 234px;
+    padding-bottom: 245px;
+    position: relative;
+}
+#banner:after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom, #f38181, #fce38a);
+    opacity: 0.9;
+}
+.banner-text {
+    position: relative;
+    z-index: 999;
+}
+.banner-text h3{
+    font-family: 'Kaushan Script', cursive;
+    font-size: 72px;
+    color: #fff;
+    font-weight: 400;
+    text-transform: capitalize;
+    padding-bottom: 11px;
+}
+.banner-text h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 150px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1;
+    position: relative;
+    padding-bottom: 141px;
+}
+.banner-text h1:after{
+    position: absolute;
+    content: '';
+    width: 60px;
+    height: 3px;
+    left: 50%;
+    bottom: 86px;
+    transform: translateX(-50%);
+    background: #fff;
+}
+.banner-text a {
+    padding: 12px 30px;
+    border: 3px solid #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: all linear .3s;
+}
+.banner-text a:hover {
+    background: #fff;
+    color: #444;
+}
+/*============ About Part CSS ================*/
+#about {
+    padding-top: 92px;
+    padding-bottom: 110px;
+}
+.heading {
+    padding-bottom: 80px;
+}
+.heading h3 {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 24px;
+    color: #333;
+    font-weight: 400;
+    padding-bottom: 5px;
+}
+.heading h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    color: #333;
+    font-weight:700;
+    text-transform: uppercase;
+    padding-bottom: 69px;
+    position: relative;
+}
+.heading h2:after{
+    position: absolute;
+    content: '';
+    width: 60px;
+    height: 3px;
+    left: 50%;
+    bottom:35px;
+    transform: translateX(-50%);
+    background: #f38181;
+}
+.heading p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    color: #999;
+    line-height: 24px;
+    font-weight:400;
+}
+.about-item{
+    position: relative;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: linear-gradient(to bottom, #f38181, #fce38a);
+    opacity: 0;
+    transition: all linear .3s;
+}
+.content i {
+    font-size: 22px;
+    color: #fff;
+}
+.content p {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+.about-item:hover .overlay {
+    height: 100%;
+    opacity: 0.9;
+}
+/*============ Counter Part CSS ================*/
+#counter {
+    background: #95e1d3;
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+.counter-item h3{
+    color: #fff;
+    font-size: 72px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+}
+.counter-item p{
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+/*============ service Part CSS ================*/
+#service {
+    padding-top: 110px;
+}
+.service-item {
+    padding-bottom: 100px;
+}
+.service-item h3 {
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+.service-item p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    color: #999;
+    line-height: 24px;
+    font-weight:400;
+}
+.service-item i {
+    font-size: 32px;
+    color: #95e1d3;
+}
+/*============ feedback Part CSS ================*/
+#feedback{
+    background: #f8f8f8;
+    padding-top: 82px;
+    padding-bottom: 70px;
+}
+.icon-main {
+    position: relative;
+}
+#feedback .left{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    color: #ccc;
+    font-size: 24px;
+    cursor: pointer;
+}
+#feedback .right{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    color: #ccc;
+    font-size: 24px;
+    cursor: pointer;
+}
+.feed-icon i {
+    width: 144px;
+    height: 144px;
+    line-height: 144px;
+    color: #95e1d3;
+    border: 3px solid #95e1d3;
+    text-align: center;
+    font-size: 60px;
+}
+.feed-comments p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    color: #999;
+    font-weight:300;
+    font-style: italic;
+    line-height: 36px;
+}
+.feed-comments h4 {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 24px;
+    color: #333;
+    font-weight:400;
+    text-transform: capitalize;
+    padding-left: 70px;
+    position: relative;
+}
+.feed-comments h4:after{
+    position: absolute;
+    content: '';
+    width: 60px;
+    height: 3px;
+    background: #f38181;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+/*============ team Part CSS ================*/
+#team {
+    padding-top: 100px;
+}
+.team-info h3 {
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding-top: 40px;
+}
+.team-info p {
+    color: #999;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    text-transform: capitalize;
+    font-size: 15px;
+}
+.team-img {
+    position: relative;
+}
+.team-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #f38181, #fce38a);
+    opacity: 0;
+    transition: all linear .3s;
+}
+.social i {
+    width: 56px;
+    height: 56px;
+    line-height: 56px;
+    background: #fce38a;
+    color: #f38181;
+    text-align: center;
+    font-size: 25px;
+    transition: all linear .3s;
+    margin: 0 -1px;
+}
+.social i:hover {
+    background: #f38181;
+    color: #fff;
+}
+.team-item:hover .team-overlay {
+    opacity: 0.9;
+}
+/*============ work Part CSS ================*/
+#work {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.work-img {
+    position: relative;
+}
+.work-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #f38181, #fce38a);
+    opacity: 0;
+    transition: all linear .3s;
+}
+.work-info i {
+    font-size: 30px;
+    color: #fff;
+}
+.work-info h3 {
+    font-size: 14px;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    padding-top: 18px;
+    text-transform: uppercase;
+}
+.work-info p {
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 15px;
+}
+.work-img:hover .work-overlay{
+    opacity: 0.9;
+}
+/*============ Footer Part CSS ================*/
+#footer {
+    background: #f8f8f8;
+    padding-top: 80px;
+}
+.footer-logo {
+    padding-bottom: 36px;
+}
+.footer-item p{
+    color: #999;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 15px;
+}
+.footer-item h6 {
+    font-size: 14px;
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    padding-top: 29px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 16px;
+}
+.footer-item h6 span {
+    font-size: 18px;
+    font-weight: 700;
+}
+.footer-item h5{
+    color: #999;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 15px;
+    text-transform: capitalize;
+    padding-top: 10px;
+    padding-bottom: 38px;
+}
+.footer-social i {
+    color: #95e1d3;
+    font-size: 16px;
+    margin-left: 18px;
+}
+.subscribe .form-control {
+    height: 38px;
+    border-radius: 0;
+    border: 1px solid #e7e7e7;
+    color: #999;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 15px;
+    text-transform: capitalize;
+}
+.sub {
+    position: relative;
+}
+.subscribe .btn {
+    padding: 6px 34px;
+    background: #95e1d3;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #fff;
+    font-size: 15px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.footer-item h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: #333;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding-bottom: 28px;
+}
+.blog-info p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: #333;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    padding-top: 5px;
+}
+.blog-main {
+    padding-bottom: 30px;
+}
+.blog-img {
+    border: 1px solid #f8f8f8;
+}
+.more-photos{
+    padding-top: 18px;
+}
+.more-photos a {
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 13px;
+}
+.subscribe {
+    padding-bottom: 48px;
+}
+.copyright {
+    border-top: 1px solid #ddd;
+}
+.copyright p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: #333;
+    font-size: 14px;
+    line-height: 60px;
+    margin-bottom: 0;
+}
+.copyright p span {
+    color: #f38181;
+}
+.back-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    display: none;
+}
+.back-top i {
+    width: 50px;
+    height: 50px;
+    background: #95e1d3;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+}
+
+.preloader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 999999;
+}
+.loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #95e1d3;
+  border-color: #95e1d3 transparent #95e1d3 transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+
+/*--------collapse main--------*/
+.card-header .btn{
+    color: #fff;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 15px 25px;
+    margin-top: 14px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn-link:hover{
+	text-decoration: none;
+}
+.btn-link.focus, .btn-link:focus {
+	text-decoration: none;
+}
+.card-header {
+	padding: 0;
+    
+}
+.card {
+	border: 0;
+}
+.card .btn.btn-link{
+    background: #14b295;
+}	
+.card .btn.btn-link.collapsed{
+    background: #2a78ba; 
+}
+.card .btn.btn-link i{
+    font-size: 20px;
+    transition: all linear .3s;
+}
+.card .btn.btn-link i{
+    transform: rotate(90deg);
+}
+.card .btn.btn-link.collapsed i{
+    transform: rotate(0deg);
+}
+.modal-dialog {
+	max-width: 1000px;
+}
+.modal-opan .modal{
+    z-index: 99999;
+}
+.nav-tabs .nav-link {
+	background: #2a78ba;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 0;
+    margin: 0 10px;
+    
+}
+.nav-tabs .nav-link.active{
+    background-color: tomato;
+    color: #fff;
+}
+.nav-tabs {
+	border-bottom: none;
+    padding-bottom: 50px;
+}
+.img{
+    margin-bottom: 40px;
+}
+
+
+
+
+/*============ Navbar Part CSS ================*/
+/*============ Navbar Part CSS ================*/
+/*============ Navbar Part CSS ================*/
+/*============ Navbar Part CSS ================*/
+/*============ Navbar Part CSS ================*/
+/*============ Navbar Part CSS ================*/
+/*============ Navbar Part CSS ================*/
+/*============ Navbar Part CSS ================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
